@@ -88,7 +88,7 @@ def main():
         # Click "Deactivate" button
         wait.until(EC.element_to_be_clickable((By.XPATH, '//span[text()="Deactivate" or text()="Desactivar" or text()="Desativar"]'))).click()
 
-         # Enter password to confirm deactivation
+        # Enter password to confirm deactivation
         password = wait.until(EC.presence_of_element_located((By.NAME, "current_password")))
         password.send_keys(data["PASSWORD"])
 
@@ -114,7 +114,6 @@ def main():
     except Exception as e:
         print("Error:", e)
     finally:
-        # driver.quit() # if you want to close the session automatically
         pass
 
 if __name__ == "__main__":
